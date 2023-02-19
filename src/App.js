@@ -13,7 +13,7 @@ const TWITTER_LINK = `https://twitter.com/${TWITTER_HANDLE}`;
 const TWITTER_LINK_1 = `https://twitter.com/${TWITTER_HANDLE_1}`;
 
 const tld = '.purr';
-const CONTRACT_ADDRESS = '0x9745659bb8Bc2A6eF04D53A8047cA4A8B12A1D5c';
+const CONTRACT_ADDRESS = '0x06bfb1d73F072f87fFA83D92D677b89bc58A1029';
 
 
 const App = () => {
@@ -139,9 +139,9 @@ const App = () => {
 				return;
 			}
 			// Calculate price based on length of domain (change this to match your contract)	
-			// 3 chars = 0.5 MATIC, 4 chars = 0.3 MATIC, 5 or more = 0.1 MATIC
-			const price = domain.length === 3 ? '0.5' : domain.length === 4 ? '0.3' : '0.1';
-			console.log("Minting domain", domain, "with price", price);
+			// 3 chars = 5 MATIC, 4 chars = 3 MATIC, 5 or more = 1 MATIC
+			const price = domain.length === 3 ? '5' : domain.length === 4 ? '3' : '1';
+			console.log("Minting domain", domain, "with price", price, "MATIC");
 		  try {
 			const { ethereum } = window;
 			if (ethereum) {
